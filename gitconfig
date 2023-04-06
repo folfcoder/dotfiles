@@ -1,0 +1,18 @@
+[user]
+	name = Kai Folf
+	email = git@fcd.im
+	signingkey = ~/.ssh/id_ed25519_sk.pub
+[gpg]
+	program = /usr/bin/gpg2
+	format = ssh
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[core]
+	editor = nano
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
